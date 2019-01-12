@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.271
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ryzhehvost.ComandlessRedeem", "Ryzhehvost.ComandlessRedeem\Ryzhehvost.ComandlessRedeem.csproj", "{29950506-38B0-40C0-B857-DE1513D36805}"
+	ProjectSection(ProjectDependencies) = postProject
+		{5B0031E4-15B6-4AC0-A179-694EEB7FF856} = {5B0031E4-15B6-4AC0-A179-694EEB7FF856}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ArchiSteamFarm", "ArchiSteamFarm\ArchiSteamFarm\ArchiSteamFarm.csproj", "{5B0031E4-15B6-4AC0-A179-694EEB7FF856}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{29950506-38B0-40C0-B857-DE1513D36805}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29950506-38B0-40C0-B857-DE1513D36805}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29950506-38B0-40C0-B857-DE1513D36805}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29950506-38B0-40C0-B857-DE1513D36805}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B0031E4-15B6-4AC0-A179-694EEB7FF856}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B0031E4-15B6-4AC0-A179-694EEB7FF856}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B0031E4-15B6-4AC0-A179-694EEB7FF856}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B0031E4-15B6-4AC0-A179-694EEB7FF856}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4CA9B681-A638-45EE-BE44-C8E7EE1E02F4}
+	EndGlobalSection
+EndGlobal
