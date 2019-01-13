@@ -12,7 +12,7 @@ namespace Ryzhehvost.CommandlessRedeem {
 		public Version Version => typeof(CommandlessRedeem).Assembly.GetName().Version;
 
 		public void OnLoaded() {
-			ASF.ArchiLogger.LogGenericInfo("Comandless Redeem Plugin by Ryzhehvost, powered by ginger cats");
+			ASF.ArchiLogger.LogGenericInfo("Commandless Redeem Plugin by Ryzhehvost, powered by ginger cats");
 		}
 
 		public async Task<string> OnBotMessage([NotNull] Bot bot, ulong steamID, [NotNull] string message) {
