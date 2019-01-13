@@ -6,7 +6,7 @@ To use:
 - (re)start ASF, you should get a message indicating that plugin loaded successfully. 
 
 
-#Плагин для активации ключей в ASF без команды
+# Плагин для активации ключей в ASF без команды
 Этот плагин для [ASF](https://github.com/JustArchiNET/ArchiSteamFarm/) позволяет активировать ключи без команды `!r` (или `!redeem`), просто отправляя их в ASF через чат Steam. Работает только в ASF 4.0+
 Для установки:
 - скачайте файл .zip из [последнего релиза](https://github.com/Ryzhehvost/Commandless-Redeem/releases/latest), в большинстве случаев вам нужен файл `ComandlessRedeem.zip`, не если вы по какой-то причине пользуетесь ASF-generic-netf.zip (а для этого нужны веские причины) - скачайте `ComandlessRedeem-netf.zip`.
