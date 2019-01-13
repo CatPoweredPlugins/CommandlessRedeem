@@ -7,7 +7,7 @@ using JetBrains.Annotations;
 
 namespace Ryzhehvost.CommandlessRedeem {
 	[Export(typeof(IPlugin))]
-	public sealed class CommandlessRedeem : IPlugin, IBotMessage {
+	public sealed class CommandlessRedeem : IBotMessage {
 		public string Name => nameof(CommandlessRedeem);
 		public Version Version => typeof(CommandlessRedeem).Assembly.GetName().Version;
 
