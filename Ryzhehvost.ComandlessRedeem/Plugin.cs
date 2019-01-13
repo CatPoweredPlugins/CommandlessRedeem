@@ -7,9 +7,9 @@ using JetBrains.Annotations;
 
 namespace Ryzhehvost.CommandlessRedeem {
 	[Export(typeof(IPlugin))]
-	public sealed class Plugin : IPlugin, IBotMessage {
-		public string Name => nameof(Plugin);
-		public Version Version => typeof(Plugin).Assembly.GetName().Version;
+	public sealed class CommandlessRedeem : IPlugin, IBotMessage {
+		public string Name => nameof(CommandlessRedeem);
+		public Version Version => typeof(CommandlessRedeem).Assembly.GetName().Version;
 
 		public void OnLoaded() {
 			ASF.ArchiLogger.LogGenericInfo("Comandless Redeem Plugin by Ryzhehvost, powered by ginger cats");
