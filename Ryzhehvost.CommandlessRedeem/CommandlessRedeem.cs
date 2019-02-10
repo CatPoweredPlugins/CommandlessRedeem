@@ -7,7 +7,7 @@ using JetBrains.Annotations;
 
 namespace Ryzhehvost.CommandlessRedeem {
 	[Export(typeof(IPlugin))]
-	public sealed class CommandlessRedeem : IBotMessage {
+	public sealed class CommandlessRedeem : IBotMessage, IBotCommand {
 		public string Name => nameof(CommandlessRedeem);
 		public Version Version => typeof(CommandlessRedeem).Assembly.GetName().Version;
 
@@ -26,5 +26,9 @@ namespace Ryzhehvost.CommandlessRedeem {
 
 			return await bot.Commands.Response(steamID, "r " + bot.BotName + " " + message, false).ConfigureAwait(false); 
 		}
-	}
+
+        public async Task<string> OnBotCommand([NotNull] Bot bot, ulong steamID, [NotNull] string message, string[] args) {
+			return await OnBotMessage(bot, steamID, string.Join(" ", args)).ConfigureAwait(false);
+		}
+    }
 }
