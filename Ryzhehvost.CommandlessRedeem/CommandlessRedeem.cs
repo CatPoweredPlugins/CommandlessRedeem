@@ -24,7 +24,7 @@ namespace Ryzhehvost.CommandlessRedeem {
 				return null;
 			}
 
-			return await bot.Commands.Response(steamID, "r " + bot.BotName + " " + message, false).ConfigureAwait(false); 
+			return await bot.Commands.Response(steamID, "r " + bot.BotName + " " + message).ConfigureAwait(false); 
 		}
 
         public async Task<string> OnBotCommand([NotNull] Bot bot, ulong steamID, [NotNull] string message, string[] args) {
