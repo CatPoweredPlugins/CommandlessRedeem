@@ -4,6 +4,7 @@
     <Authors>Ryzhehvost</Authors>
     <AssemblyVersion>0.1</AssemblyVersion>
     <TargetFrameworks>netcoreapp2.2;net472</TargetFrameworks>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
@@ -13,5 +14,9 @@
   <ItemGroup>
     <ProjectReference Include="..\ArchiSteamFarm\ArchiSteamFarm\ArchiSteamFarm.csproj" />
   </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="echo &quot;notice me, senpai!&quot;&#xD;&#xA;echo $(TargetDir)&#xD;&#xA;mkdir $(TargetDir)CommandlessRedeem&#xD;&#xA;copy $(TargetPath) $(TargetDir)CommandlessRedeem\&#xD;&#xA;7z a -tzip -mx7  CommandlessRedeem.zip $(TargetDir)CommandlessRedeem" />
+  </Target>
 
 </Project>
