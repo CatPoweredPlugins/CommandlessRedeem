@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="echo &quot;notice me, senpai!&quot;&#xD;&#xA;echo $(TargetDir)&#xD;&#xA;mkdir $(TargetDir)CommandlessRedeem&#xD;&#xA;copy $(TargetPath) $(TargetDir)CommandlessRedeem\&#xD;&#xA;7z a -tzip -mx7  CommandlessRedeem.zip $(TargetDir)CommandlessRedeem" />
+    <Exec Command="mkdir $(TargetDir)CommandlessRedeem&#xD;&#xA;copy $(TargetPath) $(TargetDir)CommandlessRedeem\&#xD;&#xA;7z a -tzip -mx7  CommandlessRedeem.zip $(TargetDir)CommandlessRedeem" />
   </Target>
 
 </Project>
