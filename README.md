@@ -14,3 +14,5 @@ To use:
 - скачайте файл .zip из [последнего релиза](https://github.com/Ryzhehvost/Commandless-Redeem/releases/latest), в большинстве случаев вам нужен файл `CommandlessRedeem.zip`, не если вы по какой-то причине пользуетесь ASF-generic-netf.zip (а для этого нужны веские причины) - скачайте `CommandlessRedeem-netf.zip`.
 - распакуйте скачанный файл .zip в папку `plugins` внутри вашей папки с ASF.
 - (пере)запустите ASF, вы должны получить сообщение что плагин успешно загружен. 
+
+![downloads](https://img.shields.io/github/downloads/Ryzhehvost/Commandless-Redeem/total.svg?style=social)
