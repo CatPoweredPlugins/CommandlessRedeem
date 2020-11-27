@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <Authors>Ryzhehvost</Authors>
-    <AssemblyVersion>0.3.0.0</AssemblyVersion>
+    <AssemblyVersion>0.4.0.0</AssemblyVersion>
     <TargetFrameworks>net5.0;net48</TargetFrameworks>
     <Nullable>enable</Nullable>
     <LangVersion>latest</LangVersion>
