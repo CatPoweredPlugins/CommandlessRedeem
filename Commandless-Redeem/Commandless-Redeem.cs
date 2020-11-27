@@ -11,12 +11,10 @@ namespace CommandlessRedeem {
 		public string Name => nameof(CommandlessRedeem);
 		public Version Version => typeof(CommandlessRedeem).Assembly.GetName().Version ?? new Version("0");
 
-		public void OnLoaded() {
-			ASF.ArchiLogger.LogGenericInfo("Commandless Redeem Plugin by Ryzhehvost, powered by ginger cats");
-		}
+		public void OnLoaded() => ASF.ArchiLogger.LogGenericInfo("Commandless Redeem Plugin by Ryzhehvost, powered by ginger cats");
 
 		public async Task<string?> OnBotMessage([NotNull] Bot bot, ulong steamID, [NotNull] string message) {
-			if (!bot.HasPermission(steamID,BotConfig.EPermission.Operator)) {
+			if (!bot.HasAccess(steamID,BotConfig.EAccess.Operator)) {
 				return null;
 			}
 
@@ -27,8 +25,6 @@ namespace CommandlessRedeem {
 			return await bot.Commands.Response(steamID, "r " + bot.BotName + " " + message).ConfigureAwait(false);
 		}
 
-        public async Task<string?> OnBotCommand([NotNull] Bot bot, ulong steamID, [NotNull] string message, string[] args) {
-			return await OnBotMessage(bot, steamID, string.Join(" ", args)).ConfigureAwait(false);
-		}
-    }
+		public async Task<string?> OnBotCommand([NotNull] Bot bot, ulong steamID, [NotNull] string message, string[] args) => await OnBotMessage(bot, steamID, string.Join(" ", args)).ConfigureAwait(false);
+	}
 }
