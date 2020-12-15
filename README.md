@@ -8,6 +8,7 @@ To use:
 - unpack downloaded .zip file to `plugins` folder inside your ASF folder.
 - (re)start ASF, you should get a message indicating that plugin loaded successfully. 
 
+You can get support for this plugin in https://steamcommunity.com/groups/Ryzheplugins (or just use github issues).
 
 # Плагин для активации ключей в ASF без команды
 Этот плагин для [ASF](https://github.com/JustArchiNET/ArchiSteamFarm/) позволяет активировать ключи без команды `!r` (или `!redeem`), просто отправляя их в ASF через чат Steam. Работает только в ASF 4.0+ (не забудьте проверить реально требуемую версию в информации о релизе).
@@ -18,5 +19,7 @@ To use:
 - скачайте файл .zip из [последнего релиза](https://github.com/Ryzhehvost/Commandless-Redeem/releases/latest), в большинстве случаев вам нужен файл `Commandless-Redeem.zip`, не если вы по какой-то причине пользуетесь ASF-generic-netf.zip (а для этого нужны веские причины) - скачайте `Commandless-Redeem-netf.zip`.
 - распакуйте скачанный файл .zip в папку `plugins` внутри вашей папки с ASF.
 - (пере)запустите ASF, вы должны получить сообщение что плагин успешно загружен. 
+
+Помощь по этому плагину вы можете получить в https://steamcommunity.com/groups/Ryzheplugins (или просто используйте раздел issues)
 
 ![downloads](https://img.shields.io/github/downloads/Ryzhehvost/Commandless-Redeem/total.svg?style=social)
