@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Composition;
 using System.Threading.Tasks;
-using ArchiSteamFarm;
-using ArchiSteamFarm.Plugins;
+using ArchiSteamFarm.Core;
+using ArchiSteamFarm.Steam;
+using ArchiSteamFarm.Steam.Storage;
+using ArchiSteamFarm.Plugins.Interfaces;
 using JetBrains.Annotations;
 
 namespace CommandlessRedeem {
