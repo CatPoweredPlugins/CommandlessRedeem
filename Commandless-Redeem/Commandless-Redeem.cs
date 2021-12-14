@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Composition;
 using System.Threading.Tasks;
 using ArchiSteamFarm.Core;
@@ -13,10 +13,13 @@ namespace CommandlessRedeem {
 		public string Name => nameof(CommandlessRedeem);
 		public Version Version => typeof(CommandlessRedeem).Assembly.GetName().Version ?? new Version("0");
 
-		public void OnLoaded() => ASF.ArchiLogger.LogGenericInfo("Commandless Redeem Plugin by Ryzhehvost, powered by ginger cats");
+		public Task OnLoaded() {
+			ASF.ArchiLogger.LogGenericInfo("Commandless Redeem Plugin by Ryzhehvost, powered by ginger cats");
+			return Task.CompletedTask;
+		}
 
-		public async Task<string?> OnBotMessage([NotNull] Bot bot, ulong steamID, [NotNull] string message) {
-			if (!bot.HasAccess(steamID,BotConfig.EAccess.Operator)) {
+		public async Task<string?> OnBotMessage(Bot bot, ulong steamID, string message) {
+			if (!bot.HasAccess(steamID, BotConfig.EAccess.Operator)) {
 				return null;
 			}
 
@@ -27,6 +30,6 @@ namespace CommandlessRedeem {
 			return await bot.Commands.Response(steamID, "r " + bot.BotName + " " + message).ConfigureAwait(false);
 		}
 
-		public async Task<string?> OnBotCommand([NotNull] Bot bot, ulong steamID, [NotNull] string message, string[] args) => await OnBotMessage(bot, steamID, string.Join(" ", args)).ConfigureAwait(false);
+		public async Task<string?> OnBotCommand(Bot bot, ulong steamID, string message, string[] args) => await OnBotMessage(bot, steamID, string.Join(" ", args)).ConfigureAwait(false);
 	}
 }
