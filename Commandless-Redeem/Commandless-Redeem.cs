@@ -3,13 +3,11 @@ using System.Composition;
 using System.Threading.Tasks;
 using ArchiSteamFarm.Core;
 using ArchiSteamFarm.Steam;
-using ArchiSteamFarm.Steam.Storage;
 using ArchiSteamFarm.Plugins.Interfaces;
-using JetBrains.Annotations;
 
 namespace CommandlessRedeem {
 	[Export(typeof(IPlugin))]
-	public sealed class CommandlessRedeem : IBotMessage, IBotCommand {
+	public sealed class CommandlessRedeem : IBotMessage, IBotCommand2 {
 		public string Name => nameof(CommandlessRedeem);
 		public Version Version => typeof(CommandlessRedeem).Assembly.GetName().Version ?? new Version("0");
 
@@ -19,7 +17,8 @@ namespace CommandlessRedeem {
 		}
 
 		public async Task<string?> OnBotMessage(Bot bot, ulong steamID, string message) {
-			if (!bot.HasAccess(steamID, BotConfig.EAccess.Operator)) {
+			EAccess access = bot.GetAccess(steamID);
+			if (access < EAccess.Operator) {
 				return null;
 			}
 
@@ -27,9 +26,9 @@ namespace CommandlessRedeem {
 				return null;
 			}
 
-			return await bot.Commands.Response(steamID, "r " + bot.BotName + " " + message).ConfigureAwait(false);
+			return await bot.Commands.Response(access, "r " + bot.BotName + " " + message).ConfigureAwait(false);
 		}
 
-		public async Task<string?> OnBotCommand(Bot bot, ulong steamID, string message, string[] args) => await OnBotMessage(bot, steamID, string.Join(" ", args)).ConfigureAwait(false);
+		public async Task<string?> OnBotCommand(Bot bot, EAccess access, string message, string[] args, ulong steamID = 0) => await OnBotMessage(bot, steamID, string.Join(" ", args)).ConfigureAwait(false);
 	}
 }
