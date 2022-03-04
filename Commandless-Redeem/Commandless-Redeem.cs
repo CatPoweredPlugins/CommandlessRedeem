@@ -16,8 +16,9 @@ namespace CommandlessRedeem {
 			return Task.CompletedTask;
 		}
 
-		public async Task<string?> OnBotMessage(Bot bot, ulong steamID, string message) {
-			EAccess access = bot.GetAccess(steamID);
+		public Task<string?> OnBotMessage(Bot bot, ulong steamID, string message) => HandleMessageInternal(bot, bot.GetAccess(steamID), message);
+
+		public static async Task<string?> HandleMessageInternal(Bot bot, EAccess access, string message) {
 			if (access < EAccess.Operator) {
 				return null;
 			}
@@ -29,6 +30,6 @@ namespace CommandlessRedeem {
 			return await bot.Commands.Response(access, "r " + bot.BotName + " " + message).ConfigureAwait(false);
 		}
 
-		public async Task<string?> OnBotCommand(Bot bot, EAccess access, string message, string[] args, ulong steamID = 0) => await OnBotMessage(bot, steamID, string.Join(" ", args)).ConfigureAwait(false);
+		public Task<string?> OnBotCommand(Bot bot, EAccess access, string message, string[] args, ulong steamID = 0) => HandleMessageInternal(bot, access, string.Join(" ", args));
 	}
 }
