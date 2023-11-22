@@ -12,7 +12,7 @@ namespace CommandlessRedeem {
 		public Version Version => typeof(CommandlessRedeem).Assembly.GetName().Version ?? new Version("0");
 
 		public Task OnLoaded() {
-			ASF.ArchiLogger.LogGenericInfo("Commandless Redeem Plugin by Ryzhehvost, powered by ginger cats");
+			ASF.ArchiLogger.LogGenericInfo("Commandless Redeem Plugin by Rudokhvist, powered by ginger cats");
 			return Task.CompletedTask;
 		}
 
