@@ -9,4 +9,4 @@ To use:
 - (re)start ASF, you should get a message indicating that plugin loaded successfully. 
 
 
-![downloads](https://img.shields.io/github/downloads/Rudokhvist/Commandless-Redeem/total.svg?style=social)
+![downloads](https://img.shields.io/github/downloads/CatPoweredPlugins/Commandless-Redeem/total.svg?style=social)
