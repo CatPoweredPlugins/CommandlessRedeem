@@ -4,7 +4,7 @@ This plugin for [ASF](https://github.com/JustArchiNET/ArchiSteamFarm/) allows ke
 **Warning:** This plugin also works for IPC, but be extremely careful when using it this way - make sure to set [Default bot](https://github.com/JustArchiNET/ArchiSteamFarm/wiki/Configuration#defaultbot) before that, or keys will be redeemed on random bot.
 
 To use:
-- download .zip file from [latest release](https://github.com/Rudokhvist/Commandless-Redeem/releases/latest), in most cases you need `Commandless-Redeem.zip`, but if you use ASF-generic-netf.zip (you really need a strong reason to do that) download `Commandless-Redeem-netf.zip`.
+- download .zip file from [latest release](https://github.com/CatPoweredPlugins/Commandless-Redeem/releases/latest), in most cases you need `Commandless-Redeem.zip`, but if you use ASF-generic-netf.zip (you really need a strong reason to do that) download `Commandless-Redeem-netf.zip`.
 - unpack downloaded .zip file to separate folder (for example `ComandlessRedeem`) inside of `plugins` folder of your ASF setup.
 - (re)start ASF, you should get a message indicating that plugin loaded successfully. 
 
